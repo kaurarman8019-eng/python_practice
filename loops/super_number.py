@@ -1,17 +1,13 @@
-num = int(input("enter number: "))
-temp = num
-sum = 0
+num = int(input("Enter number: "))
 
-while temp > 0:
-    digit = temp % 10
-    fact = 1
-    for i in range(1,digit+1):
-        fact *= i
-        sum += fact
-        temp //= 10
+while num > 9:
+    sum = 0
     
-if sum == num:
-    print("Strong number")
-    
-else:
-    print("Not a strong number")
+    while num > 0:
+        digit = num % 10
+        sum += digit
+        num //= 10
+        
+    num = sum
+
+print("Super number:", num)
